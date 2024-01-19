@@ -1,7 +1,7 @@
 class Solution {
     public String removeOuterParentheses(String s) {
         
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int count = 0;
         int length = s.length();
 
@@ -16,10 +16,10 @@ class Solution {
             
             if(count != 0  && (count != 1 || (count == 1 && ch == ')')))
             {
-                result = result + ch;
+                result.append(ch);
             }
         }
 
-        return result;
+        return result.toString();
     }
 }
